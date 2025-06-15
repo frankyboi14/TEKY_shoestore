@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shop</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+<div class="">
+    <div class="header">
+        <h1 class="text-center mb-5">Shop bán giày thể thao</h1>
+        <div class="text-right">
+            <button class="btn">đăng kí</button>
+            <button class="btn">đăng nhập</button>
+        </div>
+    </div>
+
+    <div class="pad-20">
+        <h2 class="text-center">Sản phẩm mới nhất</h2>
+        <div class="text-right">
+            <button class="btn">xem giỏ hàng</button>
+        </div>
+        <div class="card-container">
+            {% for product in products %}
+                
+                <div class="card bordered">
+                    <div class="card-body">
+                        <img src="{{ product.image.url }}" alt="" class="w-100">
+                        <h3>{{ product.name }}</h3>
+                        <div>Hãng: {{ product.brand }}</div>
+                        <div>Giá: <strong>${{ product.price }}</strong></div>
+                        <br>
+                        <p>{{ product.desc|truncatewords:20 }}</p>
+                        <br>
+                        <a href="{% url 'product_detail' product.id %}"><button class="btn">xem chi tiết</button></a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

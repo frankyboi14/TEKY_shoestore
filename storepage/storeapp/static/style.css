@@ -1,0 +1,107 @@
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+:root {
+    --col1: rgb(15, 161, 161);
+    --col2: rgb(47, 223, 223);
+} 
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+
+.d-flex {
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.pad-10 {
+    padding: 20px;
+}
+
+.pad-20 {
+    padding: 40px;
+}
+
+.mart-10 {
+    margin-top: 10px;
+}
+
+.bg-light {
+    background-color: rgb(191, 244, 223);
+}
+
+h3 {
+    font-weight: bolder;
+}
+
+.card-container {
+    position: absolute;
+    display: flex;
+    gap: 5px;
+    padding: 10px 20px;
+}
+
+.bordered {
+    border: solid 1px black;
+}
+
+.card img {
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.card {
+    padding: 10px;
+    width: 15%;
+    background-color: var(--col1);
+    position: relative;
+    cursor: pointer;
+    transition: .2s;
+    top: 0;
+}
+
+.card:hover {
+    background-color: var(--col2);
+    /* top: -10px; */
+}
+
+.btn {
+    text-decoration: none;
+    background-color: var(--col2);
+    color: black;
+    padding: 5px 10px;
+    border: solid 1px black;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: black;
+    color: var(--col2);
+}
+
+.header {
+    background-color: var(--col1);
+    padding: 20px;
+}
